@@ -1,74 +1,48 @@
 # TaxMile.in - Devang B. Shah & Co
 
-This is the official repository for the TaxMile.in frontend website.
+This is the repository for the TaxMile.in website.
+It is a **Single Page Static HTML Application** (SPA) built for maximum performance and zero maintenance.
 
-## Project Overview
+## Tech Stack (Pure Static)
 
-TaxMile.in is a professional tax consultancy website for Devang B. Shah & Co.
-It is a Single Page Application (SPA) built with React, TypeScript, and Tailwind CSS.
-The website is designed to be purely frontend (static), with no backend or database dependencies.
-
-## Tech Stack
-
-- **Framework:** React (Vite)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Animations:** Framer Motion
-- **Icons:** Lucide React
+- **Core:** HTML5 + Vanilla JavaScript
+- **Interactivity:** Alpine.js (Lightweight state management)
+- **Styling:** Tailwind CSS (via CDN Script for dev / CLI for prod)
+- **Icons:** Lucide Icons (Standalone Script)
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (v18 or higher)
-- npm (v9 or higher)
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd TaxMile.in
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+- A modern web browser.
+- No Node.js or `npm` required.
 
 ### Running the Project
 
-To start the development server:
+1.  **Clone the repository:**
+    ```bash
+    git clone <repository-url>
+    ```
 
-```bash
-npm run dev
-```
+2.  **Open the website:**
+    - Simply double-click `index.html` to open it in your browser.
+    - Or use a simple HTTP server (e.g., Live Server in VS Code).
 
-The application will be available at `http://localhost:5173`.
+## Deployment
 
-### Building for Production
+This website is designed to be hosted on **GitHub Pages** (or any static host) with zero configuration.
 
-To create a production build:
-
-```bash
-npm run build
-```
-
-The build artifacts will be stored in the `dist/` directory.
-
-## Contributing
-
-1. **Iterative Development:** This project follows a strict iterative development process. Please refer to `GEMINI.md` for the current iteration and requirements.
-2. **Code Style:** Follow the existing project structure and styling (Tailwind CSS).
-3. **Commit Messages:** Use clear and descriptive commit messages.
-4. **No Backend:** Do not introduce any backend logic or database connections.
+- **Entry Point:** `index.html`
+- **Build Command:** None (Not required)
+- **Output Directory:** Root `/`
 
 ## Project Structure
 
-- `src/components`: Reusable UI components.
-- `src/layout`: Layout components (Header, Footer).
-- `src/pages`: Page content components (to be implemented).
-- `src/App.tsx`: Main application entry point and routing logic.
+- `index.html`: The entry point (Structure).
+- `assets/`: 
+  - `css/`: Stylesheets (`style.css`).
+  - `js/`: Application logic (`app.js`, `tailwind.config.js`) and dependencies (`tailwindcss.js`, `alpine.min.js`, `lucide.min.js`).
+  - `images/`: Static images (`logo.png`).
 - `GEMINI.md`: Project requirements and single source of truth.
 
 ## License

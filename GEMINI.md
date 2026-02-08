@@ -24,6 +24,7 @@ The tone must be **corporate, clean, ethical, and trustworthy**.
 - No database
 - No authentication
 - No form submission logic
+- No form submission logic
 - Static deployable build
 - SPA-like behavior (single page, no reloads)
 - Content changes without server navigation
@@ -65,12 +66,12 @@ The tone must be **corporate, clean, ethical, and trustworthy**.
 
 ## 5. Mandatory Tech Stack & Deployment Compatibility
 
-### Build-Time Framework (Static Output Only)
-- Framework: React with Vite (Preferred)
-- Language: TypeScript
-- Styling: Tailwind CSS
-- Animations: Framer Motion (subtle only)
-- Icons: Lucide Icons or Heroicons
+### Build-Time Framework (Pure Static)
+- Framework: None (Pure HTML5)
+- Language: Vanilla JavaScript + Alpine.js (Local Script)
+- Styling: Tailwind CSS (Local Script for development)
+- Animations: CS3 Transitions + Alpine.js
+- Icons: Lucide Icons (Local Script)
 
 ### Deployment Target
 - Hosting Platform: GitHub Pages
@@ -78,22 +79,16 @@ The tone must be **corporate, clean, ethical, and trustworthy**.
   - HTML
   - CSS
   - JavaScript
-- No server-side rendering
-- No runtime Node.js dependencies
-- No API routes
+- No build step required (Index.html is entry)
+- No Node.js build pipeline required
 - No backend code
 
 ### Routing Rules
-- No browser-based routing (React Router not required)
-- Navigation must be state-based
+- Single Index.html file
+- Content switching via JavaScript/Alpine.js
+- No browser-based routing
 - Optional hash navigation allowed (`#income-tax`, `#gst`)
 - Must work correctly on GitHub Pages without redirects
-
-### Build Requirement
-- The project MUST generate a static `/dist` folder
-- `/dist` must be deployable directly to GitHub Pages
-
----
 
 ## 6. SEO & Performance Requirements
 
@@ -258,9 +253,10 @@ Used primarily for Visa applications, detailing assets and liabilities to reflec
 **Firm:** Devang B. Shah & Co  
 **Brand:** TaxMile.in  
 
-- Phone: Placeholder
-- Email: Placeholder
-- Address: Placeholder
+- Phone: +91 84608 77626
+- Email: Shahdevang1995@gmail.com, Mansishah271097@gmail.com
+- Address: F-10 Nandashray Enclave, Nr Poonam Complex, Kaldarshan Char Rasta, Waghodia Road, Vadodara – 390019
+- Map Link: https://maps.app.goo.gl/wZWzeDpSUWShwkZk7
 
 ---
 
@@ -323,11 +319,10 @@ Each iteration must be completed, explained, and approved before moving to the n
 
 ## 12. GitHub Pages Compatibility Rules
 
-- Application must work when served from a subpath
-- Use relative paths for assets
-- Base path must be configurable (`base` in Vite)
+- Application must work when served from a subpath or root
+- Use relative paths for assets (e.g. `assets/images/logo.png`)
 - No absolute routing dependencies
-- Refreshing the page must not break navigation
+- Refreshing the page (if hash used) must not break navigation
 
 ---
 
