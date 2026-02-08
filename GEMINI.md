@@ -221,14 +221,16 @@ Certification of business turnover for tenders, bank loans, and statutory compli
 
 ### Investment Services
 
-- Mutual Fund Investment (Lumpsum / SIP)
-- SWP, STP
-- Scheme selection using Alpha, Beta, SD, Sharpe Ratio
-- Tax Planning & Tax Harvesting
-- Loss Harvesting
-- Portfolio Rebalancing
-- Portfolio Review
-- De-Mat Account (NJ E-Wealth Account)
+**Wealth Creation & Management**
+
+- **Mutual Fund:** Wealth creation through expert-curated portfolios matched to your goals (Lumpsum / SIP).
+- **SWP & STP Strategies:** Systematic plans for regular income and optimized asset allocation over time.
+- **Scheme Selection:** Data-driven selection using Alpha, Beta, & Sharpe Ratio analytics.
+- **Tax Planning:** Optimizing returns by strategically minimizing tax liability and harvesting.
+- **Loss Harvesting:** Strategic booking of losses to offset capital gains and save tax efficiently.
+- **Portfolio Rebalancing:** Periodic adjustments to maintain your desired risk-reward ratio.
+- **De-Mat Account:** Secure and seamless NJ E-Wealth account services for all investments.
+- **NJ Wealth (Devang B Shah):** AMFI Registered Mutual Fund Distributor, ARN : 342754 (Centered Card).
 
 ---
 
