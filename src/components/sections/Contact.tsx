@@ -1,6 +1,6 @@
 import React from 'react';
 import { SectionContainer } from '../SectionContainer';
-import { Phone, Mail, MapPin, Clock, Award, Building2 } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Award, Building2, ExternalLink } from 'lucide-react';
 import { SEO } from '../SEO';
 
 export const Contact: React.FC = () => {
@@ -89,11 +89,19 @@ export const Contact: React.FC = () => {
                             <MapPin size={20} className="text-red-500 mt-1 shrink-0" />
                             <div>
                                 <h4 className="font-semibold text-slate-800 mb-1">Regd Office</h4>
-                                <p className="text-slate-600 leading-relaxed text-sm">
+                                <a
+                                    href="https://maps.app.goo.gl/Pn9tsyrCGxyBMAxh6"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-slate-600 leading-relaxed text-sm hover:text-primary-600 hover:underline block group"
+                                >
                                     F-10 Nandashray Enclave, Nr Poonam Complex,<br />
                                     Kaldarshan Char Rasta, Waghodia Road,<br />
                                     Vadodara – 390019
-                                </p>
+                                    <span className="inline-flex items-center gap-1 text-xs font-semibold text-primary-600 mt-2 group-hover:text-primary-700">
+                                        View on Google Maps <ExternalLink size={12} />
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>

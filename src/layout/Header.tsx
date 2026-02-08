@@ -13,9 +13,19 @@ export const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection,
   return (
     <header className="fixed top-0 left-0 right-0 h-16 bg-white/95 backdrop-blur-sm border-b border-slate-100 shadow-soft z-50 flex items-center justify-between px-4 md:px-8 transition-all duration-300">
       {/* Brand */}
-      <div className="flex flex-col">
-        <h1 className="text-xl md:text-2xl font-bold text-primary-700 leading-none">Taxmile.in</h1>
-        <span className="text-sm text-slate-500 font-medium">by Devang B. Shah & Co</span>
+      <div className="flex items-center gap-3 cursor-pointer" onClick={() => setActiveSection('Home')}>
+        <img
+          src="/logo.png"
+          alt="Devang B. Shah & Co Logo"
+          className="h-10 md:h-12 w-auto object-contain"
+          onError={(e) => {
+            (e.target as HTMLImageElement).style.display = 'none';
+          }}
+        />
+        <div className="flex flex-col">
+          <h1 className="text-xl md:text-2xl font-bold text-primary-700 leading-none">Taxmile.in</h1>
+          <span className="text-[10px] md:text-sm text-slate-500 font-medium whitespace-nowrap">by Devang B. Shah & Co</span>
+        </div>
       </div>
 
       {/* Desktop Navigation */}
