@@ -202,7 +202,7 @@ We provide comprehensive Income Tax services for individuals and businesses acro
 - Import Export Code (IEC)
 - MSME Registration
 - AOP Deed
-- Turnover Certificate
+
 
 ---
 
@@ -213,6 +213,9 @@ Used by banks for Cash Credit (CC), Overdraft (OD), and MSME loans. Also known a
 
 **Net Worth Certificate:**  
 Used primarily for Visa applications, detailing assets and liabilities to reflect net worth.
+
+**Turnover Certificate:**
+Certification of business turnover for tenders, bank loans, and statutory compliance.
 
 ---
 
