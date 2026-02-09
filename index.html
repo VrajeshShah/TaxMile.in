@@ -660,37 +660,91 @@
         <h2 class="text-2xl md:text-3xl font-bold text-slate-800">EPF Services</h2>
         <div class="h-1 w-20 bg-primary-500 mx-auto mt-3 rounded-full"></div>
       </div>
-      <div class="flex-grow overflow-y-auto custom-scrollbar pr-2 pb-20 space-y-6 text-slate-700">
-        <p class="text-lg leading-relaxed max-w-3xl">Complete Employee Provident Fund (EPF) solutions for employees.</p>
+      <div class="flex-grow overflow-y-auto custom-scrollbar pr-2 pb-20 flex flex-col items-center">
+        <p class="text-center text-base md:text-lg text-slate-600 mb-6 max-w-3xl mx-auto shrink-0">
+          Complete Employee Provident Fund (EPF) solutions for employees.
+        </p>
+
         <div
-          class="bg-white p-6 rounded-xl shadow-card border border-slate-100 hover:shadow-soft transition-shadow duration-300">
-          <div class="flex items-center gap-3 mb-6">
-            <div class="p-2 bg-primary-50 rounded-lg text-primary-600">
-              <i data-lucide="piggy-bank" class="w-6 h-6"></i>
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 gap-4 w-[95%] md:w-[90%] mx-auto place-items-stretch">
+
+          <!-- 1. EPF Advance Withdrawal -->
+          <div
+            class="lg:col-span-2 bg-white p-6 rounded-xl shadow-card border border-slate-100 hover:shadow-soft transition-all duration-300 flex flex-col items-center justify-center text-center hover:-translate-y-1 min-h-[180px]">
+            <div class="p-4 bg-blue-50 rounded-full text-blue-600 mb-4">
+              <i data-lucide="wallet" class="w-8 h-8"></i>
             </div>
-            <h3 class="text-xl font-semibold text-primary-800">EPF Solutions</h3>
+            <h3 class="text-xl font-bold text-primary-800 mb-2">EPF Advance Withdrawal</h3>
+            <p class="text-sm text-slate-600 leading-snug">Partial withdrawal for marriage, education, housing, or
+              medical needs.</p>
           </div>
-          <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <li class="flex items-center p-3 rounded-md hover:bg-slate-50 transition-colors"><span
-                class="w-2 h-2 bg-primary-500 rounded-full mr-3"></span><span class="font-medium text-slate-800">EPF
-                Advance Withdrawal</span></li>
-            <li class="flex items-center p-3 rounded-md hover:bg-slate-50 transition-colors"><span
-                class="w-2 h-2 bg-primary-500 rounded-full mr-3"></span><span class="font-medium text-slate-800">EPF
-                Final Settlement</span></li>
-            <li class="flex items-center p-3 rounded-md hover:bg-slate-50 transition-colors"><span
-                class="w-2 h-2 bg-primary-500 rounded-full mr-3"></span><span class="font-medium text-slate-800">Tax
-                Planning & Form 15G/15H</span></li>
-            <li class="flex items-center p-3 rounded-md hover:bg-slate-50 transition-colors"><span
-                class="w-2 h-2 bg-primary-500 rounded-full mr-3"></span><span
-                class="font-medium text-slate-800">Nomination
-                & KYC</span></li>
-            <li class="flex items-center p-3 rounded-md hover:bg-slate-50 transition-colors"><span
-                class="w-2 h-2 bg-primary-500 rounded-full mr-3"></span><span class="font-medium text-slate-800">Joint
-                Declaration</span></li>
-            <li class="flex items-center p-3 rounded-md hover:bg-slate-50 transition-colors"><span
-                class="w-2 h-2 bg-primary-500 rounded-full mr-3"></span><span class="font-medium text-slate-800">Pension
-                Payment Order (PPO)</span></li>
-          </ul>
+
+          <!-- 2. EPF Final Settlement -->
+          <div
+            class="lg:col-span-2 bg-white p-6 rounded-xl shadow-card border border-slate-100 hover:shadow-soft transition-all duration-300 flex flex-col items-center justify-center text-center hover:-translate-y-1 min-h-[180px]">
+            <div class="p-4 bg-green-50 rounded-full text-green-600 mb-4">
+              <i data-lucide="piggy-bank" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-bold text-primary-800 mb-2">EPF Final Settlement</h3>
+            <p class="text-sm text-slate-600 leading-snug">Full corpus withdrawal upon retirement or end of employment.
+            </p>
+          </div>
+
+          <!-- 3. Tax Planning & Form 15G/15H -->
+          <div
+            class="lg:col-span-2 bg-white p-6 rounded-xl shadow-card border border-slate-100 hover:shadow-soft transition-all duration-300 flex flex-col items-center justify-center text-center hover:-translate-y-1 min-h-[180px]">
+            <div class="p-4 bg-purple-50 rounded-full text-purple-600 mb-4">
+              <i data-lucide="file-check-2" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-bold text-primary-800 mb-2">Tax Planning & Form 15G/15H</h3>
+            <p class="text-sm text-slate-600 leading-snug">Submission of declarations to prevent TDS deduction on
+              withdrawals.</p>
+          </div>
+
+          <!-- 4. Nomination -->
+          <div
+            class="lg:col-span-2 bg-white p-6 rounded-xl shadow-card border border-slate-100 hover:shadow-soft transition-all duration-300 flex flex-col items-center justify-center text-center hover:-translate-y-1 min-h-[180px]">
+            <div class="p-4 bg-orange-50 rounded-full text-orange-600 mb-4">
+              <i data-lucide="user-plus" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-bold text-primary-800 mb-2">Nomination</h3>
+            <p class="text-sm text-slate-600 leading-snug">Updating nominee details to legally secure your provident
+              fund.</p>
+          </div>
+
+          <!-- 5. KYC (Centered start of 2nd row: col-start-2) -->
+          <div
+            class="lg:col-start-2 lg:col-span-2 bg-white p-6 rounded-xl shadow-card border border-slate-100 hover:shadow-soft transition-all duration-300 flex flex-col items-center justify-center text-center hover:-translate-y-1 min-h-[180px]">
+            <div class="p-4 bg-indigo-50 rounded-full text-indigo-600 mb-4">
+              <i data-lucide="file-badge-2" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-bold text-primary-800 mb-2">KYC Update</h3>
+            <p class="text-sm text-slate-600 leading-snug">Linking PAN, Aadhaar, and Bank details for seamless claim
+              processing.</p>
+          </div>
+
+          <!-- 6. Joint Declaration -->
+          <div
+            class="lg:col-span-2 bg-white p-6 rounded-xl shadow-card border border-slate-100 hover:shadow-soft transition-all duration-300 flex flex-col items-center justify-center text-center hover:-translate-y-1 min-h-[180px]">
+            <div class="p-4 bg-pink-50 rounded-full text-pink-600 mb-4">
+              <i data-lucide="file-signature" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-bold text-primary-800 mb-2">Joint Declaration</h3>
+            <p class="text-sm text-slate-600 leading-snug">Correction of personal details like name, DOB, or joining
+              date.</p>
+          </div>
+
+          <!-- 7. EPF Transfer Claim -->
+          <div
+            class="lg:col-span-2 bg-white p-6 rounded-xl shadow-card border border-slate-100 hover:shadow-soft transition-all duration-300 flex flex-col items-center justify-center text-center hover:-translate-y-1 min-h-[180px]">
+            <div class="p-4 bg-teal-50 rounded-full text-teal-600 mb-4">
+              <i data-lucide="arrow-right-left" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-bold text-primary-800 mb-2">EPF Transfer Claim</h3>
+            <p class="text-sm text-slate-600 leading-snug">Transfer of EPF balance from previous to current employer
+              account.</p>
+          </div>
+
         </div>
       </div>
     </section>
@@ -736,7 +790,7 @@
     </section>
 
     <!-- CONTACT SECTION -->
-    <section x-show="activeSection === 'Contact'" x-transition.opacity.duration.300ms
+    <section x-show="activeSection === 'Contact Us'" x-transition.opacity.duration.300ms
       class="h-full w-full px-4 md:px-8 max-w-7xl mx-auto flex flex-col" x-cloak>
       <div class="text-center mb-6 shrink-0 pt-4">
         <h2 class="text-2xl md:text-3xl font-bold text-slate-800">Contact Us</h2>

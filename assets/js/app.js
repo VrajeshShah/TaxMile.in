@@ -6,7 +6,7 @@ document.addEventListener('alpine:init', () => {
         navItems: [
             'Home', 'Income Tax', 'GST', 'TDS & TCS',
             'Registrations', 'CMA & Net Worth', 'Investment',
-            'EPF', 'Accounting', 'Contact'
+            'EPF', 'Accounting', 'Contact Us'
         ],
         init() {
             // Handle Hash Navigation
