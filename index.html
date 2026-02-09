@@ -789,7 +789,188 @@
       </div>
     </section>
 
-    <!-- CONTACT SECTION -->
+    <!-- GALLERY & REVIEWS SECTION -->
+    <section x-show="activeSection === 'Gallery & Reviews'" x-transition.opacity.duration.300ms
+      class="h-full w-full px-4 md:px-8 max-w-7xl mx-auto flex flex-col" x-cloak x-data="{ activeTab: 'Gallery' }">
+
+      <div class="text-center mb-2 shrink-0 pt-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-800">Gallery & Client Reviews</h2>
+        <div class="h-1 w-20 bg-primary-500 mx-auto mt-2 rounded-full mb-4"></div>
+
+        <!-- Sub-Navigation Tabs -->
+        <div class="inline-flex bg-slate-100 p-1 rounded-lg">
+          <button @click="activeTab = 'Gallery'"
+            class="px-4 py-2 rounded-md text-sm font-medium transition-all duration-200"
+            :class="activeTab === 'Gallery' ? 'bg-white text-primary-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'">
+            Photo Gallery
+          </button>
+          <button @click="activeTab = 'Reviews'"
+            class="px-4 py-2 rounded-md text-sm font-medium transition-all duration-200"
+            :class="activeTab === 'Reviews' ? 'bg-white text-primary-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'">
+            Client Reviews
+          </button>
+        </div>
+      </div>
+
+      <!-- Content Area (Flex Grow to Center Content) -->
+      <div class="flex-grow flex flex-col justify-center items-center pb-2 overflow-hidden relative">
+
+        <!-- Gallery Slider Tab -->
+        <div x-show="activeTab === 'Gallery'" x-transition:enter="transition ease-out duration-300"
+          x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
+          class="w-full max-w-5xl h-full flex flex-col justify-center" x-data="{
+                activeSlide: 0,
+                slides: [
+                    { img: 'https://lh3.googleusercontent.com/p/AF1QipPSm7oA6q7iW7BsWHUE4C4MYgeagRWSFU-apHOh=s680-w680-h510-rw', title: 'Office' },
+                    { img: 'https://lh3.googleusercontent.com/p/AF1QipPzHSv5DYAWanugTpCRSyg6zp8A2_TuINSGGuj_=s680-w680-h510-rw', title: 'Our Partners' },
+                    { img: 'https://lh3.googleusercontent.com/p/AF1QipN1CEtLEV7RvKQ_9p3JIfP-PGIi-yBrlb81Xrfb=s680-w680-h510-rw', title: 'Partners at Work' },
+                    { img: 'https://lh3.googleusercontent.com/p/AF1QipOODRDsiT3qzza13TdrlglYvicG2SG-Pc49vRX_=s680-w680-h510-rw', title: 'Certificates & Recognition' },
+                    { img: 'https://lh3.googleusercontent.com/p/AF1QipMe0Q3u3q-5DlNevT0PxwbDlb70sWfKbrp41GLb=s680-w680-h510-rw', title: 'Office Entrance' }
+                ],
+                next() { this.activeSlide = (this.activeSlide === this.slides.length - 1) ? 0 : this.activeSlide + 1 },
+                prev() { this.activeSlide = (this.activeSlide === 0) ? this.slides.length - 1 : this.activeSlide - 1 }
+            }">
+
+          <div class="text-center mb-2">
+            <p class="text-slate-500 text-sm">A glimpse into our professional environment</p>
+          </div>
+
+          <!-- Slider Container (Portrait Optimized - Maximized Height) -->
+          <div
+            class="relative max-h-[75vh] w-full aspect-[3/4] md:max-w-md mx-auto overflow-hidden rounded-2xl shadow-2xl bg-slate-900 group">
+            <template x-for="(slide, index) in slides" :key="index">
+              <div x-show="activeSlide === index" x-transition:enter="transition transform ease-out duration-500"
+                x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="transition transform ease-in duration-300 absolute top-0 left-0 w-full h-full"
+                x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
+                class="w-full h-full relative">
+                <!-- Using object-cover for slick portrait fill as requested -->
+                <img :src="slide.img" :alt="slide.title" class="w-full h-full object-cover">
+
+                <!-- Modern Glassmorphism Caption -->
+                <div
+                  class="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-sm p-4 text-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 border-t border-white/10">
+                  <h4 class="text-lg font-bold text-center" x-text="slide.title"></h4>
+                </div>
+              </div>
+            </template>
+
+            <!-- Navigation Controls -->
+            <button @click="prev()"
+              class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full backdrop-blur-md transition-all">
+              <i data-lucide="chevron-left" class="w-8 h-8"></i>
+            </button>
+            <button @click="next()"
+              class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full backdrop-blur-md transition-all">
+              <i data-lucide="chevron-right" class="w-8 h-8"></i>
+            </button>
+
+            <!-- Indicators -->
+            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+              <template x-for="(slide, index) in slides">
+                <button @click="activeSlide = index" class="w-2 h-2 rounded-full transition-all duration-300 shadow-sm"
+                  :class="activeSlide === index ? 'bg-white w-6' : 'bg-white/50 hover:bg-white/80'">
+                </button>
+              </template>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reviews Slider Tab -->
+        <div x-show="activeTab === 'Reviews'" x-transition:enter="transition ease-out duration-300"
+          x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
+          class="w-full max-w-6xl h-full flex flex-col justify-center items-center" x-cloak x-data="{
+                offset: 0,
+                reviews: [
+                    { name: 'Viral Parekh', initial: 'V', color: 'bg-indigo-100 text-indigo-600', time: '2 months ago', review: 'I’ll give 5 out of 5 star because every time whenever I called him for my work then he given a prompt support as well proper guidance. Also very knowledgeable in this field. And I’ll recommend him also in my family or friends in future. All the best 👍' },
+                    { name: 'Sanjog Hedau', initial: 'S', color: 'bg-emerald-100 text-emerald-600', time: '3 months ago', review: 'Excellent Tax Consultant. Outstanding tax services. Smooth and efficient experience. Very good knowledge on subject. Clearly explain complex regulations. Prompt communication. Ready to listen. Expert guidance and peace of mind. All the best.' },
+                    { name: 'Kamna Jadhav', initial: 'K', color: 'bg-rose-100 text-rose-600', time: '3 months ago', review: 'Filing IT return with Devang since few years now. Everyone in my family is filing returns through his help. Very prompt service and actually takes out time to solve your queries. He will never rush you and try to be as co operative as possible. Thank you for all your services 👍' },
+                    { name: 'Adisun Energies', initial: 'A', color: 'bg-amber-100 text-amber-600', time: 'a year ago', review: 'My Firm\'s GST Account is Handled by Devang Shah since 2022 . I am very happy and satisfied with the services offered by him. They provide timely filling of Returns and provides great advise on GST as well as Income Tax.' },
+                    { name: 'Ankur Pandya', initial: 'A', color: 'bg-cyan-100 text-cyan-600', time: 'a year ago', review: 'I have been working with Devangbhai from last three years for filling ITR of myself, my wife and my mother. They have been very helpful and treats you like family. Their best quality is that they are always ready to hear your queries and always provide best solution.' },
+                    { name: 'ROHIT Patel', initial: 'R', color: 'bg-violet-100 text-violet-600', time: 'a year ago', review: 'Great Tax Consulting by Mr. Devang Shah. Addresses all the tax related concerns nicely and provides complete end to end service. Would recommend him to everyone, in an heart beat.' },
+                    { name: 'Preeti Mehta', initial: 'P', color: 'bg-fuchsia-100 text-fuchsia-600', time: '2 years ago', review: 'Great service! Got excellent advice on how to decrease my tax liability and managed to save me even more than I originally thought.' },
+                    { name: 'Miteshkumar Patanwadiya', initial: 'M', color: 'bg-blue-100 text-blue-600', time: '2 days ago', review: 'Excellent service! Very professional, knowledgeable, and cooperative. Everything related to tax filing, GST, and accounting was done on time and with clear guidance.' },
+                    { name: 'Nikunj Rajput', initial: 'N', color: 'bg-lime-100 text-lime-600', time: 'a month ago', review: 'Great experience bcz I don\'t know anything about what is GST and how to get, devang bhai guided every small details and everything, very quick response every time' }
+                ],
+                scroll(direction) {
+                    const container = this.$refs.scrollContainer;
+                    const scrollAmount = direction === 'left' ? -350 : 350;
+                    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                }
+            }">
+
+          <div class="text-center mb-6">
+            <h3 class="text-xl font-semibold text-slate-700">What Our Clients Say</h3>
+            <div class="flex items-center justify-center gap-1 mt-2">
+              <span class="text-amber-500 flex gap-1">
+                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              </span>
+              <span class="text-slate-500 font-medium ml-2">5/5 from Google Reviews (166 reviews)</span>
+            </div>
+          </div>
+
+          <!-- Carousel Container -->
+          <div class="relative w-full px-4 md:px-12 group">
+            <!-- Prev Button -->
+            <button @click="scroll('left')"
+              class="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-3 bg-white border border-slate-100 shadow-lg rounded-full text-slate-500 hover:text-primary-600 hover:scale-110 transition-all">
+              <i data-lucide="chevron-left" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Scrollable Area -->
+            <div x-ref="scrollContainer"
+              class="flex overflow-x-auto gap-6 pb-4 pt-4 scrollbar-hide snap-x snap-mandatory py-4"
+              style="scrollbar-width: none; -ms-overflow-style: none;">
+              <template x-for="r in reviews">
+                <div
+                  class="flex-none w-[320px] md:w-[400px] snap-center bg-white p-8 rounded-2xl shadow-card border border-slate-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-start relative overflow-hidden">
+                  <div class="absolute top-6 right-6 text-slate-100">
+                    <i data-lucide="quote" class="w-16 h-16 fill-current"></i>
+                  </div>
+
+                  <div class="flex items-center gap-4 mb-6 relative z-10">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center font-bold text-2xl shadow-sm"
+                      :class="r.color" x-text="r.initial"></div>
+                    <div>
+                      <h4 class="font-bold text-lg text-slate-800" x-text="r.name"></h4>
+                      <p class="text-xs text-slate-400" x-text="r.time"></p>
+                      <div class="flex text-amber-500 w-4 h-4 gap-0.5 mt-1">
+                        <template x-for="i in 5">
+                          <i data-lucide="star" class="fill-current w-4 h-4"></i>
+                        </template>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-slate-600 text-base italic leading-relaxed relative z-10"
+                    x-text="'&quot;' + r.review + '&quot;'"></p>
+                </div>
+              </template>
+            </div>
+
+            <!-- Next Button -->
+            <button @click="scroll('right')"
+              class="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-3 bg-white border border-slate-100 shadow-lg rounded-full text-slate-500 hover:text-primary-600 hover:scale-110 transition-all">
+              <i data-lucide="chevron-right" class="w-6 h-6"></i>
+            </button>
+          </div>
+
+          <div class="mt-8 text-center">
+            <a href="https://maps.app.goo.gl/wZWzeDpSUWShwkZk7" target="_blank"
+              class="inline-flex items-center gap-2 text-primary-600 hover:text-primary-800 font-bold transition-colors hover:underline underline-offset-4">
+              <span>Read more reviews on Google</span>
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT US SECTION -->
     <section x-show="activeSection === 'Contact Us'" x-transition.opacity.duration.300ms
       class="h-full w-full px-4 md:px-8 max-w-7xl mx-auto flex flex-col" x-cloak>
       <div class="text-center mb-6 shrink-0 pt-4">
