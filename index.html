@@ -1165,6 +1165,120 @@
       </div>
     </section>
 
+    <!-- ABOUT US SECTION -->
+    <!-- ABOUT US SECTION -->
+    <section x-show="activeSection === 'About Us'" x-transition.opacity.duration.300ms
+      class="h-full w-full px-4 md:px-8 max-w-7xl mx-auto flex flex-col" x-cloak>
+      <div class="text-center mb-2 shrink-0 pt-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-800">About Us</h2>
+        <div class="h-1 w-20 bg-primary-500 mx-auto mt-2 rounded-full"></div>
+      </div>
+
+      <!-- Content Container - Scrollable on mobile/tablet, hidden overflow on large desktop -->
+      <div
+        class="flex-grow flex flex-col justify-start md:justify-center items-center pb-24 md:pb-4 overflow-y-auto md:overflow-hidden custom-scrollbar">
+
+        <!-- Intro Text -->
+        <div class="text-center mb-6 md:mb-4 max-w-3xl mx-auto shrink-0">
+          <p class="text-base md:text-lg text-slate-600 leading-snug">
+            Dedicated team delivering excellence in tax consultancy. We simplify complexity and drive growth for
+            individuals and businesses alike.
+          </p>
+        </div>
+
+        <!-- Unified Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full md:h-full md:max-h-[80vh] md:content-center">
+
+          <!-- Row 1 -->
+          <!-- Experience -->
+          <div
+            class="bg-white p-4 rounded-xl shadow-card border border-slate-100 hover:shadow-soft transition-all duration-300 hover:-translate-y-1 flex flex-col items-center justify-center text-center min-h-[140px]">
+            <div class="p-2 bg-blue-50 rounded-lg text-blue-600 mb-2">
+              <i data-lucide="calendar-clock" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-slate-800 text-base mb-1">Established</h3>
+            <p class="text-slate-600 text-sm">Engaged in professional tax practice since <br><span
+                class="font-bold text-xl text-primary-700">2018</span></p>
+          </div>
+
+          <!-- ITR -->
+          <div
+            class="bg-white p-4 rounded-xl shadow-card border border-slate-100 hover:shadow-soft transition-all duration-300 hover:-translate-y-1 flex flex-col items-center justify-center text-center min-h-[140px]">
+            <div class="p-2 bg-green-50 rounded-lg text-green-600 mb-2">
+              <i data-lucide="file-check-2" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-slate-800 text-base mb-1">Income Tax</h3>
+            <p class="text-slate-600 text-sm">Processing <span
+                class="font-bold text-xl text-primary-700">600+</span><br> Income Tax Returns (ITR) per assessment year
+            </p>
+          </div>
+
+          <!-- EPF -->
+          <div
+            class="bg-white p-4 rounded-xl shadow-card border border-slate-100 hover:shadow-soft transition-all duration-300 hover:-translate-y-1 flex flex-col items-center justify-center text-center min-h-[140px]">
+            <div class="p-2 bg-purple-50 rounded-lg text-purple-600 mb-2">
+              <i data-lucide="wallet" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-slate-800 text-base mb-1">EPF Solutions</h3>
+            <p class="text-slate-600 text-sm">Handled <span class="font-bold text-xl text-primary-700">2000+</span><br>
+              EPF Claims (Advance, Final Settlement, & Transfer)</p>
+          </div>
+
+          <!-- Row 2 -->
+          <!-- GST Registrations -->
+          <div
+            class="bg-white p-4 rounded-xl shadow-card border border-slate-100 hover:shadow-soft transition-all duration-300 hover:-translate-y-1 flex flex-col items-center justify-center text-center min-h-[140px]">
+            <div class="p-2 bg-orange-50 rounded-lg text-orange-600 mb-2">
+              <i data-lucide="building-2" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-slate-800 text-base mb-1">GST Registrations</h3>
+            <p class="text-slate-600 text-sm">Completed <span class="font-bold text-xl text-primary-700">125+</span><br>
+              GST Registrations for Companies, Proprietorships, HUFs, & Partnership Firms</p>
+          </div>
+
+          <!-- GST Compliance -->
+          <div
+            class="bg-white p-4 rounded-xl shadow-card border border-slate-100 hover:shadow-soft transition-all duration-300 hover:-translate-y-1 flex flex-col items-center justify-center text-center min-h-[140px]">
+            <div class="p-2 bg-teal-50 rounded-lg text-teal-600 mb-2">
+              <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-slate-800 text-base mb-1">GST Compliance</h3>
+            <p class="text-slate-600 text-sm">Managing end-to-end GST work for <span
+                class="font-bold text-xl text-primary-700">42+</span><br> Firms/Companies (Monthly/Quarterly/Yearly)</p>
+          </div>
+
+          <!-- Investment -->
+          <div
+            class="bg-white p-4 rounded-xl shadow-card border border-slate-100 hover:shadow-soft transition-all duration-300 hover:-translate-y-1 flex flex-col items-center justify-center text-center min-h-[140px]">
+            <div class="p-2 bg-indigo-50 rounded-lg text-indigo-600 mb-2">
+              <i data-lucide="trending-up" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-slate-800 text-base mb-1">Investment</h3>
+            <p class="text-slate-600 text-sm">AMFI Registered Mutual Fund Distributor & Partnered with <br><span
+                class="font-semibold text-primary-700">NJ Wealth</span></p>
+          </div>
+
+          <!-- Row 3: Spans 3 columns -->
+          <!-- Advisory Highlight -->
+          <div
+            class="col-span-1 md:col-span-2 lg:col-span-3 bg-primary-50 rounded-xl p-4 border border-primary-100 text-center flex flex-col md:flex-row items-center justify-center gap-4 hover:shadow-soft transition-all duration-300 min-h-[120px]">
+            <div class="p-3 bg-white rounded-full text-primary-600 shadow-sm shrink-0">
+              <i data-lucide="users" class="w-8 h-8"></i>
+            </div>
+            <div class="text-center md:text-left">
+              <h3 class="text-xl font-bold text-primary-900 mb-1">Trusted Advisory</h3>
+              <p class="text-base text-primary-800 leading-snug">
+                Provided <span class="font-bold text-xl">1000+</span> advisories to businesses, salaried individuals,
+                and various parties regarding comprehensive Tax & Investment Planning.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- Template for safety, though all sections are now hardcoded above -->
     <template x-for="item in navItems">
       <div x-show="false"></div>
